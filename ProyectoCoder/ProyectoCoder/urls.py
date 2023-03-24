@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from AppCoder.views import *
 
 import AppCoder.models
 from AppCoder.models import Curso
@@ -25,14 +26,10 @@ from AppcCoder.models import Entregable
 
 
 urlpatterns = [
-from django.urls import path
-from AppCoder.views import *
-
-urlpatterns = [
     path('cursos', cursos, name="AppCoderCursos"),
     path('curso/<nombre>/<anio>', crear_curso, name="AppCoderCurso"),
     path('estudiantes', estudiantes, name="AppCoderEstudiantes"),
     path('profesores', profesores, name="AppCoderProfesores"),
 ]
 
-]
+
