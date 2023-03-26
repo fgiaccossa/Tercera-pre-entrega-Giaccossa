@@ -2,6 +2,9 @@ from django.shortcuts import render
 from AppCoder.models import Curso
 
 
+def prueba(request):
+    return render(request, "index.html")
+
 def cursos(request):
     all_cursos = Curso.objects.all()
     context = {
