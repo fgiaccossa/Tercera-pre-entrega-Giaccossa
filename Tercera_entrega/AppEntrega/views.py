@@ -3,8 +3,8 @@ from django.http import HttpResponse
 
 # Create your views here.
 
-def inicio(rquest):
-    return HttpResponse('vista inicio')
+def inicio(request):
+    return render(request, 'index.html')
 
 def cursos(request):
     return HttpResponse('vista cursos')
