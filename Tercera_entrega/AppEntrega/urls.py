@@ -3,7 +3,7 @@ from AppEntrega import views
 
 urlpatterns= [
     path('', views.inicio, name="inicio"),
-    path('cursos', views.cursos, name="cursos"),
-    path('profesores', views.profesores, name="profesores"),
-    path('entregables', views.entregables, name="entregables"),
+    path('pasajero', views.pasajero, name="pasajero"),
+    path('destinos', views.destinos, name="destinos"),
+    path('formularioSorteo', views.sorteo, name="formulariosSorteo")
 ]

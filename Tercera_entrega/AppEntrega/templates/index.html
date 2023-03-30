@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Landing Page - Tercera Pre-Entrega Python</title>
+        <title>Landing Page - Tercera Pre-Entrega Python - Fabián Giaccossa</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap icons-->
@@ -22,7 +22,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
-                <a class="navbar-brand" href="#!">PRE ENTREGA TRES DE PYTHON</a>
+                <a class="navbar-brand" href="#!">PRE ENTREGA TRES DE PYTHON - Fabián Giaccossa</a>
                 <a class="btn btn-primary" href="#signup">Registrarse</a>
             </div>
         </nav>
@@ -33,7 +33,8 @@
                     <div class="col-xl-6">
                         <div class="text-center text-white">
                             <!-- Page heading-->
-                            <h1 class="mb-5">Esta es la tecera pre entrega del curso Python de Coderhouse!</h1>
+                            <h1 class="mb-5">VIAJES PYTHON </h1>
+                            <h1 class="mb-5">"Descubre tu destino"</h1>
                             <!-- Signup form-->
                             <!-- * * * * * * * * * * * * * * *-->
                             <!-- * * SB Forms Contact Form * *-->
@@ -78,27 +79,11 @@
         <section class="features-icons bg-light text-center">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4">
-                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                            <div class="features-icons-icon d-flex"><i class="bi-window m-auto text-primary"></i></div>
-                            <h3>Fully Responsive</h3>
-                            <p class="lead mb-0">This theme will look great on any device, no matter the size!</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                            <div class="features-icons-icon d-flex"><i class="bi-layers m-auto text-primary"></i></div>
-                            <h3>Bootstrap 5 Ready</h3>
-                            <p class="lead mb-0">Featuring the latest build of the new Bootstrap 5 framework!</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-                            <div class="features-icons-icon d-flex"><i class="bi-terminal m-auto text-primary"></i></div>
-                            <h3>Easy to Use</h3>
-                            <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
-                        </div>
-                    </div>
+                        <h2>COMPLETE EL SIGUIENTE FORMULARIO PARA PARTICIPAR DEL SORTEO DE DOS PASAJES AL DESTINO QUE ELIJAS</h2>
+                        <form action="/formularioSorteo/" method="post">{% csrf_token %}
+                        <p>Destino al que desea viajar:<input type="text" name="Destino"></p>
+                        <p>Fecha en la que desea viajar:<input type="date" name="Fecha"></p>
+                        <input type="submit" name="Enviar">
                 </div>
             </div>
         </section>
@@ -107,9 +92,13 @@
             <div class="container-fluid p-0">
                 <div class="row g-0">
                     <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-1.jpg')"></div>
-                    <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-                        <h2>Fully Responsive Design</h2>
-                        <p class="lead mb-0">When you use a theme created by Start Bootstrap, you know that the theme will look great on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
+                    <div class="col-lg-6 order-lg-1 my-auto showcase-text" align="center">
+                        <h2>COMPLETE EL SIGUIENTE FORMULARIO PARA PARTICIPAR DEL SORTEO DE DOS PASAJES AL DESTINO QUE ELIJAS</h2>
+                        <form action="/formularioDestino/" method="post">{% csrf_token %}
+                        <p class="lead mb-0">Destino al que desea viajar:<input type="text" name="Destino"></p>
+                        <p class="lead mb-0">Fecha en la que desea viajar:<input type="date" name="Fecha"></p>
+                        <input type="submit" name="Enviar">
+
                     </div>
                 </div>
                 <div class="row g-0">

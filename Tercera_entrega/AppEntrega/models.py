@@ -2,22 +2,20 @@ from django.db import models
 
 # Create your models here.
 
-class Curso (models.Model):
-    nombre=models.CharField(max_length=40)
-    camada=models.IntegerField()
+class pasajero (models.Model):
+    nombre=models.CharField(max_length=40, verbose_name="Nombre")
+    apellido=models.CharField(max_length=40, verbose_name="Apellido")
+    edad=models.IntegerField(max_length=3, verbose_name="Edad")
+    email=models.EmailField(verbose_name="Email")
+    telefono=models.IntegerField(max_length=10, verbose_name="Teléfono")
 
-class Estudiante (models.Model):
-    nombre=models.CharField(max_length=40)
-    apellido=models.CharField(max_length=40)
-    email=models.EmailField()
 
-class Profesor (models.Model):
-    nombre=models.CharField(max_length=40)
-    apellido=models.CharField(max_length=40)
-    email=models.EmailField()
-    profesion=models.CharField(max_length=30)
+class destino (models.Model):
+    destino=models.CharField(max_length=40)
+    fecha=models.DateField()
 
-class Entregable (models.Model):
-    nombre=models.CharField(max_length=40)
-    FechaDeEntrega=models.DateField()
-    entregado=models.BooleanField()
+class Preferencias (models.Model):
+    equipaje=models.BooleanField()
+    comidas=models.BooleanField()
+    bebidas=models.BooleanField()
+

@@ -1,19 +1,19 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+#from forms import pasajero
 
 # Create your views here.
 
 def inicio(request):
     return render(request, 'index.html')
 
-def cursos(request):
-    return HttpResponse('vista cursos')
+def pasajero(request):
+    return render(request)
+def destinos(request):
+    return render(request,'AppEntrega/destinos.html')
 
-def profesores(request):
-    return HttpResponse('vista profesores')
+def preferencias(request):
+    return HttpResponse('vista preferencias')
 
-def estudiantes(request):
-    return HttpResponse('vista estudiantes')
-
-def entregables(request):
-    return HttpResponse('vista entregables')
+def sorteo(request):
+    return render(request,"AppEntrega/formularioSorteo.html")
