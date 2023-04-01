@@ -1,3 +1,5 @@
+import datetime
+
 from django.db import models
 
 # Create your models here.
@@ -13,7 +15,7 @@ class Pasajero (models.Model):
 class Destino (models.Model):
     destino=models.CharField(max_length=40)
     salida=models.DateField()
-    llegada = models.DateField()
+    hotel=models.BooleanField(default=False)
 
 class Preferencias (models.Model):
     equipaje=models.BooleanField(default=False, name="Incluir equipaje de bodeja")

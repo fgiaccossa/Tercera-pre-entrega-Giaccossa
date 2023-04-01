@@ -8,7 +8,7 @@ class UserRegisterForm(UserCreationForm):
     email=forms.EmailField()
     telefono=forms.IntegerField()
 
-class AuthenticationForm(AuthenticationFormForm):
+class AuthenticationForm(AuthenticationForm):
     Usuario=forms.CharField(max_length=40)
     Password=forms.PasswordInput()
 
