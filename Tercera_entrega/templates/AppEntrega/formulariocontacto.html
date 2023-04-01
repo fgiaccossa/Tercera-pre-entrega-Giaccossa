@@ -1,0 +1,16 @@
+
+{% block contenido_cambia %}
+<form action="{% url 'AppEntrega' %}" method="post">{% csrf_token %}</form>
+{{ form.as_p }}
+
+{% if contacto %}
+    {% for contacto in contacto %}
+    <p>nombre: {{contacto.nombre}}</p>
+    <p>apellido: {{contacto.apellido}}</p>
+    <p>email: {{contacto.email}}</p>
+    <p>consulta: {{contacto.consulta}}</p>
+{% endfor %}
+    {% else %}
+        <h1>Ha ocurrido un error. Intente nuevamente.</h1>
+    {% endif %}
+{% endblock %}

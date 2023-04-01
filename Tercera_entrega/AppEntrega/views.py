@@ -1,5 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+
+import AppEntrega.forms
+from AppEntrega.forms import Contacto
 from AppEntrega.models import Pasajero
 #from forms import Pasajeroform
 
@@ -8,29 +11,17 @@ from AppEntrega.models import Pasajero
 def inicio(request):
     return render(request, 'index.html')
 
-#def pasajero(request):
-#    if request.method == "POST":
-#        mi_formulario = Pasajeroform(request.POST)
+def nosotros(request):
+    return render(request, 'about.html')
 
-#        if mi_formulario.is_valid():
-#            informacion = mi_formulario.cleaned_data
-#            alfajor_save = Alfajor(
-#                nombre=informacion['nombre'],
-#                tipo=informacion['tipo'],
-#                sabor=informacion['sabor'],
-#            )
- #           alfajor_save.save()
+def contacto (request):
+    if request.method == "POST":
 
-#    all_alfajores = Alfajor.objects.all()
-    #context = {
-#       "alfajores": all_al
+        form = AppEntrega.forms.Contacto(request.POST)
+        if form.is_valid():
+            form.save()
 
-
-#def pasajero(request):
-#    context={
-#        "form": form.Pasajeroform()
-#    }
-#    return render(request, 'AppEntrega/formulariopasajero.html', context=context)
+            return redirect("AppEntrega_inicio")
 
 
 

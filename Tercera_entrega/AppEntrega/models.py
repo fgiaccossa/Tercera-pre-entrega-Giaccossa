@@ -18,7 +18,7 @@ class Destino (models.Model):
     hotel=models.BooleanField(default=False)
 
 class Preferencias (models.Model):
-    equipaje=models.BooleanField(default=False, name="Incluir equipaje de bodeja")
-    comidas=models.BooleanField(default=False, name="Incluir comidas durante el vuelo")
-    bebidas=models.BooleanField(default=False, name="Incluir bebidas libres durante el vuelo")
+    equipaje=models.BooleanField(default=False)
+    comidas=models.BooleanField(default=False)
+    bebidas=models.BooleanField(default=False)
 
