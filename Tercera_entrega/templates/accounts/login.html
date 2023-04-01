@@ -1,0 +1,11 @@
+{%  extends "index.html" %}
+
+{% block contenido_cambia %}
+
+    <form  method="POST">
+        {%  csrf_token %}
+        {{  form.as_p }}
+        <input type="submit" value="Enviar">
+    </form>
+
+{% endblock %}

@@ -1,16 +1,17 @@
 from django import forms
-
-class Pasajeroform(forms.Form):
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import AuthenticationForm
+class UserRegisterForm(UserCreationForm):
     nombre=forms.CharField(max_length=40)
     apellido=forms.CharField(max_length=40)
     edad=forms.IntegerField(max_value=99)
     email=forms.EmailField()
-    telefono=forms.IntegerField(max_value=30)
+    telefono=forms.IntegerField()
 
-class Destinoform(forms.Form):
-    destino=forms.CharField(max_length=40)
-    salida=forms.DateField()
-    llegada = forms.DateField()
+class AuthenticationForm(AuthenticationFormForm):
+    Usuario=forms.CharField(max_length=40)
+    Password=forms.PasswordInput()
+
 
 class Preferenciasform(forms.Form):
     equipaje=forms.BooleanField()

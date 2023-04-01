@@ -1,0 +1,17 @@
+
+{% block contenido_cambia %}
+<form action="{% url 'AppEntrega' %}" method="post">{% csrf_token %}</form>
+{{ form.as_p }}
+
+{% if pasajero %}
+    {% for pasajero in pasajero %}
+    <p>nombre: {{pasajero.nombre}}</p>
+    <p>apellido: {{pasajero.apellido}}</p>
+    <p>edad: {{pasajero.edad}}</p>
+    <p>email: {{pasajero.email}}</p>
+    <p>telefono: {{pasajero.telefono}}</p>
+{% endfor %}
+    {% else %}
+        <h1>No hay pasajeros registrados aún</h1>
+    {% endif %}
+{% endblock %}

@@ -16,11 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-import AppEntrega.views
 
 urlpatterns = [
     path('', include('AppEntrega.urls')),
     path('admin/', admin.site.urls),
-    path('AppEntrega/', include('AppEntrega.urls'))
+    path('AppEntrega/', include('AppEntrega.urls')),
+    path('accounts/', include('accounts.urls'))
 ]
 

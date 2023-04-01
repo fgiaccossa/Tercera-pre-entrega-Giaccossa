@@ -2,20 +2,21 @@ from django.db import models
 
 # Create your models here.
 
-class pasajero (models.Model):
-    nombre=models.CharField(max_length=40, verbose_name="Nombre")
-    apellido=models.CharField(max_length=40, verbose_name="Apellido")
-    edad=models.IntegerField(max_length=3, verbose_name="Edad")
-    email=models.EmailField(verbose_name="Email")
-    telefono=models.IntegerField(max_length=10, verbose_name="Teléfono")
+class Pasajero (models.Model):
+    nombre=models.CharField(max_length=40)
+    apellido=models.CharField(max_length=40)
+    edad=models.IntegerField()
+    email=models.EmailField()
+    telefono=models.IntegerField()
 
 
-class destino (models.Model):
+class Destino (models.Model):
     destino=models.CharField(max_length=40)
-    fecha=models.DateField()
+    salida=models.DateField()
+    llegada = models.DateField()
 
 class Preferencias (models.Model):
-    equipaje=models.BooleanField()
-    comidas=models.BooleanField()
-    bebidas=models.BooleanField()
+    equipaje=models.BooleanField(default=False, name="Incluir equipaje de bodeja")
+    comidas=models.BooleanField(default=False, name="Incluir comidas durante el vuelo")
+    bebidas=models.BooleanField(default=False, name="Incluir bebidas libres durante el vuelo")
 

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sorteo de pasjes</title>
+</head>
+<body>
+<form action="/formularioSorteo/" method="post">{% csrf_token %}
+    <p style ="arial" color="red" align="center"> COMPLETA EL SIGUIENTE FORMULARIO PARA PARTICIPAR DEL SORTEO DE DOS PASAJES AL DESTINO QUE ELIJAS</p>
+    <p>Nombre:<input type="text" name="Nombre"></p>
+    <p>Apellido:<input type="text" name="Apellido"></p>
+    <p>Telefono:<input type="tel" name="Teléfono"></p>
+    <p>Destino al que desea viajar:<input type="text" name="Destino"></p>
+    <p>Fecha en la que desea viajar:<input type="date" name="Fecha"></p>
+    <input type="submit", name="Enviar">
+</form>
+</body>
+</html>
